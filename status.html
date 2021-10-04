@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ada Wifi</title>
+  $(if refresh-timeout)
+  <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+  $(endif)
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="apple-touch-icon" href="assets\img\favicon.png">
+  <link rel="icon" href="assets\img\favicon.png">
+  <link rel='stylesheet'
+    href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic'>
+  <link rel='stylesheet' href='assets\css\bootstrap.min.css'>
+  <link rel='stylesheet' href='assets\css\vendor.css'>
+  <link rel='stylesheet' href='assets\css\theme-3.css' id="theme">
+  <link rel='stylesheet' href='assets\css\custom.css'>
+  <script src='assets\js\modernizr-2.8.3.min.js'></script>
+</head>
+
+<body>
+  <!-- 
+
+  <div class="page-loader">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>  .page-loader -->
+
+  <header id="siteHeader" class="site-header site-header-fixed-top">
+    <nav id="siteNavbar" class="navbar navbar-default navbar-fixed-top site-navbar-from-light-fg">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle-icon navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon ti-layout-grid3-alt"></span>
+          </button>
+
+          <a class="navbar-brand" href="login.html">
+            <img class="navbar-brand-media-light" src="assets\img\persegi.png" alt="">
+            <img class="navbar-brand-media-dark" src="assets\img\persegi.png" alt="">
+          </a>
+        </div> <!-- .navbar-header -->
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a data-smooth-scroll="true" href="#home">Home</a></li>
+            <!-- <li><a data-smooth-scroll="true" href="#service">Service</a></li> -->
+            <li><a data-smooth-scroll="true" href="#contact">Contact</a></li>
+            <li><a href="status.html">Status</a></li>
+            <li><a href="logout.html?erase-cookie=true">Logout</a></li>
+          </ul>
+        </div> <!-- .navbar-collapse -->
+      </div>
+    </nav>
+  </header> <!-- .site-header -->
+
+  <div class="main">
+    <div id="home" class="home-section home-hero align-outer bg-theme-status">
+
+      <div class="align-inner align-middle">
+        <div class="container">
+          <div class="home-row row">
+            <div class="home-left-col col-sm-6">
+              <h1 class="texttap" style="
+                    line-height: 1.333333333333333;
+                    margin-top: 3rem;
+                    margin-bottom: 3rem;
+                    font-size: 2.25rem;
+                    font-weight: 300;
+                    color: #b6e2a6;
+                    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                    text-align: center;
+                  ">
+                <!-- <strong>TAP Internet Service</strong> -->
+                <img src="assets\img\logo00.png" class="img-responsive" alt="ada wifi">
+              </h1>
+
+              <div class="col-sm-6">
+                <div class="btn-wrap">
+                  <a class="btn btn-lg btn-block btn-theme-2 wow bounceIn" data-wow-delay=".2s"
+                    data-smooth-scroll="true" href="#service">Layanan<span class="icon ti-arrow-circle-down"></span></a>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="btn-wrap">
+                  <a class="btn btn-lg btn-block btn-default wow bounceIn" href="logout.html?erase-cookie=true">Log
+                    Out<span class="icon ti-arrow-circle-down"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="home-form-col col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
+              <div class="panel panel-theme-2 wow fadeInUp">
+                <div class="panel-heading">
+                  <h5>Informasi Internet Anda</h5>
+                </div>
+                <div class="panel-body">
+                  <table class="table">
+                    <tbody class="align-l">
+                      <tr>
+                        <td>Username</td>
+                        <td>$(username)</td>
+                      </tr>
+                      <tr>
+                        <td>IP Address</td>
+                        <td>$(ip)</td>
+                      </tr>
+                      <tr>
+                        <td>MAC Address</td>
+                        <td>$(mac)</td>
+                      </tr>
+                      $(if session-time-left)
+                      <tr>
+                        <td>Connected / left</td>
+                        <td>$(uptime) / $(session-time-left)</td>
+                      </tr>
+                      $(else)
+                      <tr>
+                        <td>Connected</td>
+                        <td>$(uptime)</td>
+                      </tr>
+                      $(endif)
+                      <tr>
+                        <td>Download / Upload</td>
+                        <td>$(bytes-out-nice) / $(bytes-in-nice)</td>
+                      </tr>
+                      $(if limit-bytes-total)
+                      <tr>
+                        <td>Sisa Kuota</td>
+                        <td>$(if limit-bytes-total)
+                          <script language=javascript>
+                            result = ($(limit - bytes - total) / 1000000).toFixed(2)
+                            document.write(result)
+                          </script> MiB
+                          $(endif)
+                          $(if limit-bytes-total == '')Unlimited$(endif)</td>
+                      </tr>
+                      $(else)
+                      <tr>
+                        <td>Sisa Kuota</td>
+                        <td>$(if limit-bytes-out)
+                          <script language=javascript>
+                            result = ($(limit - bytes - out) / 1000000).toFixed(2)
+                            document.write(result)
+                          </script> MiB
+                          $(endif)
+                          $(if limit-bytes-out == '')Unlimited$(endif)</td>
+                      </tr>
+                      $(endif)
+                      $(if refresh-timeout)
+                      <tr>
+                        <td>Status refresh</td>
+                        <td>$(refresh-timeout)</td>
+                      </tr>
+                      $(endif)
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="service" class="service-section">
+      <div class="container">
+        <div class="service-row row">
+          <div class="iconbox col-sm-6 col-md-3 wow fadeInUp">
+            <div class="iconbox-media">
+              <img class="iconbox-media-img" src="assets\img\service\service-icon-1.png" alt="">
+            </div>
+            <div class="iconbox-header">
+              <h4 class="iconbox-header-title">IT Infrastruktur</h4>
+            </div>
+            <div class="iconbox-content">
+              <p>Membangun infrastruktur jaringan untuk menghubungkan semua Regional Office dengan Head Office</p>
+            </div>
+          </div> .iconbox -->
+
+    <!-- <div class="iconbox col-sm-6 col-md-3 wow fadeInUp" data-wow-delay=".2s">
+            <div class="iconbox-media">
+              <img class="iconbox-media-img" src="assets\img\service\service-icon-2.png" alt="">
+            </div>
+            <div class="iconbox-header">
+              <h4 class="iconbox-header-title">Kekeluargaan</h4>
+            </div>
+            <div class="iconbox-content">
+              <p>Menjaga tali silaturahmi keluarga melalui internet</p>
+            </div>
+          </div> .iconbox -->
+
+    <!-- <div class="iconbox col-sm-6 col-md-3 wow fadeInUp" data-wow-delay=".4s">
+            <div class="iconbox-media">
+              <img class="iconbox-media-img" src="assets\img\service\service-icon-3.png" alt="">
+            </div>
+            <div class="iconbox-header">
+              <h4 class="iconbox-header-title">Pekerjaan</h4>
+            </div>
+            <div class="iconbox-content">
+              <p>Memudahkan pekerjaan melalui jaringan TAP</p>
+            </div>
+          </div> .iconbox -->
+
+    <!-- <div class="iconbox col-sm-6 col-md-3 wow fadeInUp" data-wow-delay=".6s">
+            <div class="iconbox-media">
+              <img class="iconbox-media-img" src="assets\img\service\service-icon-4.png" alt="">
+            </div>
+            <div class="iconbox-header">
+              <h4 class="iconbox-header-title">Aplikasi</h4>
+            </div>
+            <div class="iconbox-content">
+              <p>Memajukan aplikasi</p>
+            </div>
+          </div> <!-- .iconbox -->
+    <!-- </div>
+      </div>
+    </div> #service --> -->
+
+    <div id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-title-row row">
+          <div class="contact-title-col col-sm-8 col-sm-offset-2">
+            <h2 class="section-title"><b>Info Lebih Lanjut</b>.</h2>
+            <p class="text-lead">Silahkan hubungi kontak dibawah jika tidak bisa terkoneksi ke Ada Wifi</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="contact-content-row row">
+
+
+          <div class="contact-info-col col-sm-5 col-sm-offset-1 col-md-offset-2">
+
+            <div class="contact-info">
+              <ul class="media-list">
+
+                <li class="media">
+                  <div class="media-left">
+                    <img class="media-object" src="assets\img\contact\phone-icon.png" alt="">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Kontak Layanan</h4>
+                    <!-- <p>
+                      <b>REGION JAMBI</b>
+                      <br>
+                      0852-6630-2193 (Ilman IT SITE BBB)
+                      <br>
+                      <br>
+                      <b>REGION KALTENG1</b>
+                      <br>
+                      0822-5564-0080 (Muslim IT SITE GBSM,MIK)
+                      <br>
+                      <br>
+                      <b>REGION KALTENG2</b>
+                      <br>
+                      0812-2568-6037 (Harun IT SITE FLTI,SKM,TAN)
+                      <br>
+                      <br>
+                      <b>REGION KALTIM1</b>
+                      <br>
+                      0852-3151-5970 (Rudi IT SITE DLJ1,NPN)
+                      <br>
+                      0853-4662-1362 (Yono IT SITE NPN)
+                      <br>
+                      0852-3151-5970 (Rudi IT SITE DLJ2,EBL)
+                      <br>
+                      <br>
+                      <b>REGION KALTIM2</b>
+                      <br>
+                      0852-5089-0160 (Aswin IT SITE PTA,KAM,SAWA,HPM)
+                    </p> -->
+                  </div>
+                </li>
+
+                <li class="media">
+                  <div class="media-left">
+                    <img class="media-object" src="assets\img\contact\email-icon.png" alt="">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Kontak E-mail</h4>
+                    <!-- <p>
+                      tap.callcenter.helpdesk@tap-agri.com
+                    </p> -->
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- #contact -->
+  </div>
+
+  <footer class="site-footer">
+    <div id="siteFooterBottom" class="site-footer-bottom-section">
+      <div class="container">
+        <div class="site-footer-bottom-border"></div>
+        <div class="row">
+          <div class="site-footer-bottom-left-col col-md-6">
+            <div class="site-footer-brand">
+              PT. Persegi Media Nusantara
+              <br>
+              <!-- <span>
+                IT Infrastructure Developer
+              </span> -->
+              </br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- #siteFooterBottom -->
+  </footer>
+
+  <script src='assets\js\jquery-1.11.3.min.js'></script>
+  <script src='assets\js\bootstrap.min.js'></script>
+  <script src='assets\js\vendor.js'></script>
+  <script src='assets\js\main.js'></script>
+  <script src='assets\js\map.js'></script>
+</body>
+
+</html>

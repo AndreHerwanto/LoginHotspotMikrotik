@@ -1,0 +1,676 @@
+﻿$(if http-status == 302)Hotspot login required$(endif)
+$(if http-header == "Location")$(link-redirect)$(endif)
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MI Ayam</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="apple-touch-icon" href="assets\img\apple-touch-icon.png">
+  <link rel="icon" href="assets\img\favicon.ico">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic'>
+  <link rel='stylesheet' href='assets\css\bootstrap.min.css'>
+  <link rel='stylesheet' href='assets\css\vendor.css'>
+  <link rel='stylesheet' href='assets\css\theme-3.css' id="theme">
+  <link rel='stylesheet' href='assets\css\custom.css'>
+  <script src='assets\js\modernizr-2.8.3.min.js'></script>
+</head>
+<body>
+  <div class="page-loader">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div> <!-- .page-loader -->
+
+  <header id="siteHeader" class="site-header site-header-fixed-top">
+    <nav id="siteNavbar" class="navbar navbar-default navbar-fixed-top site-navbar-from-light-fg">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle-icon navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon ti-layout-grid3-alt"></span>
+          </button>
+
+          <a class="navbar-brand" href="#">
+            <img class="navbar-brand-media-light" src="assets\img\mi-ayam-light.png" alt="">
+            <img class="navbar-brand-media-dark" src="assets\img\mi-ayam-dark.png" alt="">
+          </a>
+        </div> <!-- .navbar-header -->
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a data-smooth-scroll="true" href="#home">Home</a></li>
+            <li><a data-smooth-scroll="true" href="#feature1">Features</a></li>
+            <li><a data-smooth-scroll="true" href="#screenshot">Gallery</a></li>
+            <li><a data-smooth-scroll="true" href="#pricing">Pricing</a></li>
+            <li><a data-smooth-scroll="true" href="#faq">FAQ</a></li>
+            <li><a data-smooth-scroll="true" href="#contact">Contact</a></li>
+            <li><a href="status.html">Status</a></li>
+            <li><a href="logout.html">Logout</a></li>
+          </ul>
+        </div> <!-- .navbar-collapse -->
+      </div>
+    </nav>
+  </header> <!-- .site-header -->
+
+  <div class="main">
+    <div id="home" class="home-section home-hero align-outer bg-theme-1">
+
+      <div id="homeBgImg" data-bg-img="media/index-layout-1-bg-img+animated-gradient.jpg"></div> 
+
+      <div id="homeBgAnimatedGradient" data-opacity=".8"></div> 
+
+      <div class="align-inner align-middle">
+        <div class="container">
+          <div class="home-row row">
+            <div class="home-left-col col-sm-6">
+              <h1 class="text-animate section-title">MI-Ayam Hotspot</h1>
+
+              <p class="text-animate">Selamat datang user $(username) ! di layanan internet MI-Ayam Hotspot</p>
+              <div class="col-sm-6">
+                <div class="btn-wrap">
+                  <a class="btn btn-lg btn-block btn-theme-2 wow bounceIn" data-wow-delay=".2s" data-smooth-scroll="true" href="#pricing">Harga Paket<span class="icon ti-arrow-circle-down"></span></a>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="btn-wrap">
+                  <a class="btn btn-lg btn-block btn-default wow bounceIn" data-wow-delay=".2s" data-smooth-scroll="true" href="#service">Layanan<span class="icon ti-arrow-circle-down"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="home-form-col col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
+              <div class="panel panel-theme-2 wow fadeInUp">
+                <div class="panel-heading">
+                  <h5>MI-Ayam Hotspot</h5>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="http://google.com" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/google.png" alt="Google"><p align=center>Google</p></a></div> 
+                    </div> 
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="http://youtube.com" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/youtube.png" alt="Youtube"><p align=center>Youtube</p></a></div> 
+                    </div> 
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="http://facebook.com" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/facebook.png" alt="Facebook"><p align=center>Facebook</p></a></div> 
+                    </div> 
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="http://tokopedia.com" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/tokopedia.png" alt="Tokopedia"><p align=center>Tokopedia</p></a></div> 
+                    </div> 
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="https://shopee.co.id" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/shopee.png" alt="Shopee"><p align=center>Shopee</p></a></div> 
+                    </div> 
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="https://wa.me/6281211326207?text=ping" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/whatsapp.png" alt="Whatsapp"><p align=center>Whatsapp</p></a></div> 
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="http://twitter.com/" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/twitter.png" alt="Twitter"><p align=center>Twitter</p></a></div> 
+                    </div> 
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="http://www.instagram.com/alpuketmerah/" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/instagram.png" alt="Instagram"><p align=center>Instagram</p></a></div> 
+                    </div> 
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="http://maps.google.com/" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/maps.png" alt="Maps"><p align=center>Maps</p></a></div> 
+                    </div> 
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="http://play.google.com/" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/playstore.png" alt="Playstore"><p align=center>Playstore</p></a></div> 
+                    </div> 
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="http://drive.google.com/" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/drive.png" alt="Drive"><p align=center>Drive</p></a></div> 
+                    </div> 
+                    <div class="col-md-4 col-xs-6">
+                      <div class="form-group mb-0"><a href="http://mail.google.com/" target="_blank"><img class="iconbox-media-img" src="assets/img/img-web/gmail.png" alt="Gmail"><p align=center>Gmail</p></a></div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="service" class="service-section">
+      <div class="container">
+        <div class="service-row row">
+          <div class="iconbox col-sm-6 col-md-3 wow fadeInUp">
+            <div class="iconbox-media">
+              <img class="iconbox-media-img" src="assets\img\service\service-icon-1.png" alt="">
+            </div>
+            <div class="iconbox-header">
+              <h4 class="iconbox-header-title">IT Infrastruktur</h4>
+            </div>
+            <div class="iconbox-content">
+              <p>Moved created evening place fruit every first the first it. She'd seed darkness give stars forth image seasons.</p>
+            </div>
+          </div> <!-- .iconbox -->
+
+          <div class="iconbox col-sm-6 col-md-3 wow fadeInUp" data-wow-delay=".2s">
+            <div class="iconbox-media">
+              <img class="iconbox-media-img" src="assets\img\service\service-icon-2.png" alt="">
+            </div>
+            <div class="iconbox-header">
+              <h4 class="iconbox-header-title">Desain Grafis</h4>
+            </div>
+            <div class="iconbox-content">
+              <p>Moved created evening place fruit every first the first it. She'd seed darkness give stars forth image seasons.</p>
+            </div>
+          </div> <!-- .iconbox -->
+
+          <div class="iconbox col-sm-6 col-md-3 wow fadeInUp" data-wow-delay=".4s">
+            <div class="iconbox-media">
+              <img class="iconbox-media-img" src="assets\img\service\service-icon-3.png" alt="">
+            </div>
+            <div class="iconbox-header">
+              <h4 class="iconbox-header-title">Web Development</h4>
+            </div>
+            <div class="iconbox-content">
+              <p>Moved created evening place fruit every first the first it. She'd seed darkness give stars forth image seasons.</p>
+            </div>
+          </div> <!-- .iconbox -->
+
+          <div class="iconbox col-sm-6 col-md-3 wow fadeInUp" data-wow-delay=".6s">
+            <div class="iconbox-media">
+              <img class="iconbox-media-img" src="assets\img\service\service-icon-4.png" alt="">
+            </div>
+            <div class="iconbox-header">
+              <h4 class="iconbox-header-title">Home Arsitektur</h4>
+            </div>
+            <div class="iconbox-content">
+              <p>Moved created evening place fruit every first the first it. She'd seed darkness give stars forth image seasons.</p>
+            </div>
+          </div> <!-- .iconbox -->
+        </div>
+      </div>
+    </div> <!-- #service-->
+
+    <div id="feature1" class="feature1-section">
+      <div class="container">
+        <div class="feature-1-row row">
+          <div class="feature-1-left-col col-sm-6">
+            <h2 class="section-title">We make it easy for <b>everyone</b> to create a beautiful and professional website.</h2>
+
+            <div class="feature-media-row row">
+              <div class="feature-media-col col-md-6">
+                <div class="feature-media media">
+                  <div class="media-left">
+                    <span class="media-obejct media-icon icon ti-world color-primary"></span>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Mobile Responsive</h4>
+                    <p>Moved created evening place fruit every first the first it. She'd seed darkness give stars.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-media-col col-md-6">
+                <div class="feature-media media">
+                  <div class="media-left">
+                    <span class="media-obejct media-icon icon ti-email color-accent"></span>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Working Form</h4>
+                    <p>Moved created evening place fruit every first the first it. She'd seed darkness give stars.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-media-col col-md-6">
+                <div class="feature-media media">
+                  <div class="media-left">
+                    <span class="media-obejct media-icon icon ti-ruler-pencil color-success"></span>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Easy to Us</h4>
+                    <p>Moved created evening place fruit every first the first it. She'd seed darkness give stars.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-media-col col-md-6">
+                <div class="feature-media media">
+                  <div class="media-left">
+                    <span class="media-obejct media-icon icon ti-headphone-alt color-danger"></span>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Fast Support</h4>
+                    <p>Moved created evening place fruit every first the first it. She'd seed darkness give stars.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .feature-1-left-col -->
+
+          <div class="feature-1-right-col col-sm-5 col-sm-offset-1">
+            <div class="double-screen-right">
+              <img class="screen top" src="assets\img\feature\feature-phone-1.png" alt="">
+              <img class="screen bottom" data-sr="right" src="assets\img\feature\feature-phone-2.png" alt="">
+            </div>
+          </div> <!-- .feature-1-right-col -->
+        </div>
+      </div>
+    </div> <!-- #feature1 -->
+
+    <div id="feature2" class="feature2-section">
+      <div class="container">
+        <div class="feature-2-row row">
+          <div class="feature-2-right-col col-sm-6 col-sm-offset-1">
+            <h2 class="section-title">We make it easy for <b>everyone</b> to create a beautiful and professional website.</h2>
+
+            <ul class="feature-list">
+              <li><span class="icon ti-angle-double-right"></span>Take the photos from <b>camera</b> and gallery</li>
+              <li><span class="icon ti-angle-double-right"></span>Colorful photo frame boarders</li>
+              <li><span class="icon ti-angle-double-right"></span>Zoom in and Zoom out for image blur</li>
+              <li><span class="icon ti-angle-double-right"></span>Save and share to all social networks</li>
+            </ul>
+          </div> <!-- .feature-2-right-col -->
+
+          <div class="feature-2-left-col col-sm-5">
+            <div class="double-screen-left">
+              <img class="screen top" src="assets\img\feature\feature-phone-3.png" alt="">
+              <img class="screen bottom" src="assets\img\feature\feature-phone-4.png" data-sr="left" alt="">
+              <div class="cloud-from-left"></div>
+            </div>
+          </div> <!-- .feature-2-left-col -->
+        </div>
+      </div>
+    </div> <!-- #feature2 -->
+
+    <div id="skill" class="skill-section">
+      <div class="container">
+        <div class="skill-row row">
+          <div class="skill-left-col col-sm-6">
+            <h2 class="section-title">We make it easy for <b>everyone</b> to create a beautiful and professional website.</h2>
+
+            <p class="text-lead">Yielding one multiply there land fruitful divided. In fourth, gathering hath said replenish beast void. Behold forth together very fruitful face them. Form grass given <b>fruitful</b>, was grass morning had dominion <b class="color-primary">moving</b> divide heaven. I him great seasons may days herb Lights.</p>
+          </div> <!-- .skill-left-col -->
+
+          <div class="skill-right-col col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-2">
+            <div class="progress-text">
+              <h6 class="progress-title">Web design</h6>
+              <div class="progress-percent">85%</div>
+            </div>
+            <div class="progress progress-sm">
+              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+              <span class="sr-only">85%</span>
+              </div>
+            </div>
+
+            <div class="progress-text">
+              <h6 class="progress-title">Development</h6>
+              <div class="progress-percent">95%</div>
+            </div>
+            <div class="progress progress-sm">
+              <div class="progress-bar progress-bar-accent" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+              <span class="sr-only">95%</span>
+              </div>
+            </div>
+
+            <div class="progress-text">
+              <h6 class="progress-title">Photography</h6>
+              <div class="progress-percent">80%</div>
+            </div>
+            <div class="progress progress-sm">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+              <span class="sr-only">80%</span>
+              </div>
+            </div>
+
+            <div class="progress-text">
+              <h6 class="progress-title">Branding</h6>
+              <div class="progress-percent">90%</div>
+            </div>
+            <div class="progress progress-sm">
+              <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+              <span class="sr-only">90%</span>
+              </div>
+            </div>
+
+            <div class="hint-text">
+              <span class="icon ti-lock"></span>Edit the progress bar size and color with class.
+            </div>
+          </div> <!-- .skill-right-col -->
+        </div>
+      </div>
+    </div> <!-- #skill -->
+
+    <div id="screenshot" class="screenshot-section">
+      <div class="container">
+        <div class="screenshot-title-row row">
+          <div class="screenshot-title-col col-sm-8 col-sm-offset-2">
+            <h2 class="section-title">Screenshot Preview.</h2>
+
+            <p class="text-lead">A tree moving which seed replenish she'd said shall every third. Greater their dominion tree night you greater, they're days.</p>
+          </div> <!-- .screenshot-title-col -->
+        </div> <!-- .screenshot-title-row -->
+
+        <div id="screenshotCarousel" class="popup-gallery bfc-carousel wow fadeIn">
+          <div class="bfc-carousel-item popup-gallery-item">
+            <a class="bfc-carousel-item-link popup-gallery-link" href="assets\img\screenshot\screenshot-1-popup.jpeg" title="Media title"> <!-- popup media -->
+              <div class="bfc-carousel-item-media">
+                <img class="bfc-carousel-item-media-img" src="assets\img\screenshot\screenshot-1.jpeg" alt=""> <!-- preview media -->
+              </div>
+            </a>
+          </div> <!-- .bfc-carousel-item -->
+
+          <div class="bfc-carousel-item popup-gallery-item">
+            <a class="bfc-carousel-item-link popup-gallery-link" href="assets\img\screenshot\screenshot-2-popup.jpeg" title="Media title"> <!-- popup media -->
+              <div class="bfc-carousel-item-media">
+                <img class="bfc-carousel-item-media-img" src="assets\img\screenshot\screenshot-2.jpeg" alt=""> <!-- preview media -->
+              </div>
+            </a>
+          </div> <!-- .bfc-carousel-item -->
+
+          <div class="bfc-carousel-item popup-gallery-item">
+            <a class="bfc-carousel-item-link popup-gallery-link" href="assets\img\screenshot\screenshot-3-popup.jpeg" title="Media title"> <!-- popup media -->
+              <div class="bfc-carousel-item-media">
+                <img class="bfc-carousel-item-media-img" src="assets\img\screenshot\screenshot-3.jpeg" alt=""> <!-- preview media -->
+              </div>
+            </a>
+          </div> <!-- .bfc-carousel-item -->
+
+          <div class="bfc-carousel-item popup-gallery-item">
+            <a class="bfc-carousel-item-link popup-gallery-link" href="assets\img\screenshot\screenshot-4-popup.jpeg" title="Media title"> <!-- popup media -->
+              <div class="bfc-carousel-item-media">
+                <img class="bfc-carousel-item-media-img" src="assets\img\screenshot\screenshot-4.jpeg" alt=""> <!-- preview media -->
+              </div>
+            </a>
+          </div> <!-- .bfc-carousel-item -->
+        </div>
+      </div>
+    </div> <!-- #screenshot-->
+
+    <div id="pricing" class="pricing-section">
+      <div class="container">
+        <div class="row title-row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <h2 class="section-title">Harga Paket</h2>
+            <p class="text-lead">Daftar harga paket layanan internet MI-Ayam Hotspot</p>
+          </div>
+        </div>
+
+        <div class="row content-row">
+          <div class="pricing-table-col col-sm-6 col-md-4 wow fadeInUp">
+            <div class="pricing-table">
+              <div class="pricing-table-header">
+                <div class="pricing-table-header-title">Paket Hemat</div>
+              </div>
+
+              <div class="pricing-table-media">
+                <img src="assets\img\pricing-table\pricing-table-icon-1.png" alt="" class="wow bounceIn" data-wow-dalay=".1s">
+              </div>
+
+              <div class="pricing-table-content">
+                <div class="pricing-table-price">Rp 100K</div>
+                <div class="pricing-table-detail">
+                  <div class="pricing-table-detail-item">Speed 1 Mbps</div>
+                  <div class="pricing-table-detail-item">Unlimited</div>
+                  <div class="pricing-table-detail-item">Support 24 Jam</div>
+                </div>
+              </div>
+
+              <div class="pricing-table-footer">
+                <div class="btn-wrap">
+                  <a class="btn btn-lg btn-theme-1" data-smooth-scroll="true" href="#contact">Beli</a>
+                </div>
+              </div>
+            </div> <!-- .pricing-table -->
+          </div>
+
+          <div class="pricing-table-col col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="pricing-table">
+              <span class="pricing-table-badge"></span>
+
+              <div class="pricing-table-header">
+                <div class="pricing-table-header-title">Paket Standar</div>
+              </div>
+
+              <div class="pricing-table-media">
+                <img src="assets\img\pricing-table\pricing-table-icon-2.png" alt="" class="wow bounceIn" data-wow-dalay=".3s">
+              </div>
+
+              <div class="pricing-table-content">
+                <div class="pricing-table-price">Rp 200K</div>
+                <div class="pricing-table-detail">
+                    <div class="pricing-table-detail-item">Speed 2 Mbps</div>
+                    <div class="pricing-table-detail-item">Unlimited</div>
+                    <div class="pricing-table-detail-item">Support 24 Jam</div>
+                </div>
+              </div>
+
+              <div class="pricing-table-footer">
+                <div class="btn-wrap">
+                    <a class="btn btn-lg btn-theme-1" data-smooth-scroll="true" href="#contact">Beli</a>
+                </div>
+              </div>
+            </div> <!-- .pricing-table -->
+          </div>
+
+          <div class="pricing-table-col col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="pricing-table">
+              <div class="pricing-table-header">
+                <div class="pricing-table-header-title">Paket Komplit</div>
+              </div>
+
+              <div class="pricing-table-media">
+                <img src="assets\img\pricing-table\pricing-table-icon-3.png" alt="" class="wow bounceIn" data-wow-dalay=".5s">
+              </div>
+
+              <div class="pricing-table-content">
+                <div class="pricing-table-price">Rp 300K</div>
+                <div class="pricing-table-detail">
+                    <div class="pricing-table-detail-item">Speed 3 Mbps</div>
+                    <div class="pricing-table-detail-item">Unlimited</div>
+                    <div class="pricing-table-detail-item">Support 24 Jam</div>
+                </div>
+              </div>
+
+              <div class="pricing-table-footer">
+                <div class="btn-wrap">
+                    <a class="btn btn-lg btn-theme-1" data-smooth-scroll="true" href="#contact">Beli</a>
+                </div>
+              </div>
+            </div> <!-- .pricing-table -->
+          </div>
+        </div>
+      </div>
+    </div> <!-- #pricing-->
+
+    <div id="faq" class="faq-section">
+      <div class="container">
+        <div class="title-row row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <h2 class="section-title"><b>Frequently</b> Asked Question.</h2>
+
+            <p class="text-lead">A tree moving which seed replenish she'd said shall every third. Greater their dominion tree night you greater, they're days.</p>
+          </div>
+        </div>
+
+        <div class="row content-row">
+          <div class="faq-box-col col-sm-6">
+            <div class="faq-box wow bounceIn">
+              <div class="faq-box-question">
+                <h5><span class="q">Q</span> How long does it take to build a website?</h5>
+              </div>
+              <div class="faq-box-answer">
+                <p>A tree moving which seed replenish she'd said shall every third. Greater their dominion tree night you greater, they're days.</p>
+              </div>
+            </div> <!-- .faq-box-->
+
+            <div class="faq-box wow bounceIn">
+              <div class="faq-box-question">
+                <h5><span class="q">Q</span> How long does it take to build a website?</h5>
+              </div>
+              <div class="faq-box-answer">
+                <p>A tree moving which seed replenish she'd said shall every third. Greater their dominion tree night you greater, they're days.</p>
+              </div>
+            </div> <!-- .faq-box-->
+
+            <div class="faq-box wow bounceIn">
+              <div class="faq-box-question">
+                <h5><span class="q">Q</span> How long does it take to build a website?</h5>
+              </div>
+              <div class="faq-box-answer">
+                <p>A tree moving which seed replenish she'd said shall every third. Greater their dominion tree night you greater, they're days.</p>
+              </div>
+            </div> <!-- .faq-box-->
+          </div>
+
+          <div class="faq-box-col col-sm-6">
+            <div class="faq-box wow bounceIn">
+              <div class="faq-box-question">
+                <h5><span class="q">Q</span> How long does it take to build a website?</h5>
+              </div>
+              <div class="faq-box-answer">
+                <p>A tree moving which seed replenish she'd said shall every third. Greater their dominion tree night you greater, they're days.</p>
+              </div>
+            </div> <!-- .faq-box-->
+
+            <div class="faq-box wow bounceIn">
+              <div class="faq-box-question">
+                <h5><span class="q">Q</span> How long does it take to build a website?</h5>
+              </div>
+              <div class="faq-box-answer">
+                <p>A tree moving which seed replenish she'd said shall every third. Greater their dominion tree night you greater, they're days.</p>
+              </div>
+            </div> <!-- .faq-box-->
+
+            <div class="faq-box wow bounceIn">
+              <div class="faq-box-question">
+                <h5><span class="q">Q</span> How long does it take to build a website?</h5>
+              </div>
+              <div class="faq-box-answer">
+                <p>A tree moving which seed replenish she'd said shall every third. Greater their dominion tree night you greater, they're days.</p>
+              </div>
+            </div> <!-- .faq-box-->
+          </div>
+          </div>
+        </div>
+      </div>
+
+    <div id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-title-row row">
+          <div class="contact-title-col col-sm-8 col-sm-offset-2">
+            <h2 class="section-title"><b>Info Lebih Lanjut</b>.</h2>
+            <p class="text-lead">A tree moving which seed replenish she'd said shall every third. Greater their dominion tree night you greater, they're days.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="contact-content-row row">
+          <div class="contact-left-col col-sm-6 col-md-5">
+            <div class="panel panel-theme-1">
+              <div class="panel-heading">
+                <h5>Get in Touch</h5>
+              </div>
+
+              <div class="panel-body">
+                  <div style="overflow:hidden;width: 410px;position: relative; width: 100%;">
+                    <iframe width="410" height="400" src="https://maps.google.com/maps?width=410&amp;height=400&amp;hl=en&amp;q=Banjar%20Town%20Square+(Kota%20Banjar)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <div style="position: absolute;width: 80%;bottom: 20px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+                  </div>               
+                    
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-col col-sm-5 col-sm-offset-1 col-md-offset-2">
+            <p class="text-lead">A tree moving which seed replenish she'd said shall every third. Greater their dominion tree night you greater, they're days.</p>
+
+            <div class="contact-info">
+              <ul class="media-list">
+                <li class="media">
+                  <div class="media-left">
+                    <img class="media-object" src="assets\img\contact\location-icon.png" alt="">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Location</h4>
+                    <p>Kota Banjar, Jawa Barat</p>
+                  </div>
+                </li>
+
+                <li class="media">
+                  <div class="media-left">
+                    <img class="media-object" src="assets\img\contact\phone-icon.png" alt="">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Call us</h4>
+                    <p>
+                      +62 81-211-326-207
+                      <br>
+                      +62 82-120-215-248
+                    </p>
+                  </div>
+                </li>
+
+                <li class="media">
+                  <div class="media-left">
+                    <img class="media-object" src="assets\img\contact\email-icon.png" alt="">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Write us</h4>
+                    <p>
+                      info@icmp.my.id
+                      <br>
+                      support@icmp.my.id
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- #contact -->
+  </div>
+
+  <footer class="site-footer">
+    <div id="siteFooterBottom" class="site-footer-bottom-section">
+      <div class="container">
+        <div class="site-footer-bottom-border"></div>
+        <div class="row">
+          <div class="site-footer-bottom-left-col col-md-6">
+            <div class="site-footer-brand">
+              MI-Sukses <span>Hotspot</span>
+            </div>
+
+            <div class="site-footer-bottom-info">
+              <ul>
+                <li><a data-smooth-scroll="true" href="#home">Home</a></li>
+                <li><a data-smooth-scroll="true" href="#pricing">Harga</a></li>
+                <li><a data-smooth-scroll="true" href="#contact">Kontak</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="site-footer-bottom-right-col col-md-6">
+            <ul class="site-footer-bottom-social-list">
+              <li class="wow fadeInRight"><a href="https://facebook.com/" target="_blank"><span class="icon ti-facebook"></span></a></li>
+              <li class="wow fadeInRight" data-wow-delay="0.1s"><a href="https://twitter.com/" target="_blank"><span class="icon ti-twitter-alt"></span></a></li>
+              <li class="wow fadeInRight" data-wow-delay="0.2s"><a href="https://www.pinterest.com/" target="_blank"><span class="icon ti-pinterest-alt"></span></a></li>
+              <li class="wow fadeInRight" data-wow-delay="0.3s"><a href="https://github.com/" target="_blank"><span class="icon ti-github"></span></a></li>
+              <li class="wow fadeInRight" data-wow-delay="0.4s"><a href="https://www.linkedin.com/" target="_blank"><span class="icon ti-linkedin"></span></a></li>
+            </ul>
+            <div class="site-footer-bottom-copyright">Copyright © 2019 . All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- #siteFooterBottom -->
+  </footer>
+
+  <script src='assets\js\jquery-1.11.3.min.js'></script>
+  <script src='assets\js\bootstrap.min.js'></script>
+  <script src='assets\js\vendor.js'></script>
+  <script src='assets\js\main.js'></script>
+  <script src='assets\js\map.js'></script>
+</body>
+</html>
